@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  Test_payment
+//
+//  Created by forp on 15/12/1.
+//  Copyright © 2015年 forp. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "GlobalVariable.h"
+
+#endif
+
+#endif /* PrefixHeader_pch */

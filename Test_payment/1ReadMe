@@ -1,0 +1,88 @@
+/* 
+  ReadMe.strings
+  Test_payment
+
+  Created by forp on 15/12/4.
+  Copyright © 2015年 forp. All rights reserved.
+*/
+/*
+ *总概：
+    集成支付功能
+
+
+//============================20160218更新========================//
+    *------------->本次更新加入了通过银联SDK支持的Apply Pay（仅支持iOS9.2及以上）
+    *更新说明：
+        加入了Apple Pay
+        仅支持iOS9.2及以上,iOS9.2开始支持通过中国银联网关进行Apple Pay,
+        2016年2月18日 Apple Pay 正式在中国上线
+
+        #先决条件
+            除了使用 PassKit 框架实施 Apple Pay 之外，您还必须：
+
+            通过付款处理机构或网关设置一个帐户。
+            通过“证书、标识符和描述文件”（“Certificates, Identifiers & Profiles”）注册一个商家 ID。
+            生成一个 Apple Pay 证书，用于加密和解密付款令牌。
+            在您的 App 中包括一个 Apple Pay 授权。
+            遵循“应用审核准则”的第 29 节中列出的要求。
+            遵循《App 审核准则》(“App Review Guidelines”)第 29 节中列出的要求。
+        #支付供应商
+            强烈建议选择支持 Apple Pay 并提供 SDK 的支付供应商。您也可以提供自己的服务器端解决方案，以用于从您的 App 接收付款、解密付款令牌并与支付供应商进行互动。信用卡和借记卡付款的处理可能非常复杂。如果您不具备相应的专业知识和系统，又希望您的 App 支持 Apple Pay，使用支付供应商提供的 SDK 是最为便捷可靠的一种方式。
+        （笔者注：so,人家如是说,也有道理,于是乎采用银联Apple Pay版的SDK,水到渠成,这配合堪称里应外合。。😄）
+    *相关类说明：
+        1.GJSPayApplePayCUP
+            银联SDK支持实现的Apple Pay,
+    *用法：
+        和银联支付类似,传入银联后台给的tn流水号即可,具体参考Demo
+    *注意：
+        1.因为iOS9.2开始支持PKPaymentNetworkChinaUnionPay（即中国银联可以支持Apple Pay了）,所以需要iOS9.2及以上系统
+        2.另外,设备要求，简略的说需要iPhone 6或者更新的手机，还有iPad Air 2与mini 3之后的平板，以及苹果手表。
+          具体型号：iPhone 6，iPhone 6 Plus，iPhone 6s， iPhone 6s Plus；iPad Air 2，iPad mini 3，iPad mini 4，iPad Pro；还有Apple Watch。
+
+        3.需以下框架的支持：CFNetwork.framework 、 libUPAPayPlugin.a 、 PassKit.framework 、 SystemConfiguration.framework
+        4.Apple Pay 需要在项目中开启Apple Pay,另需要在开发者账号中心生成 Merchant ID（访问苹果iOS 开发者中心的位于Identifiers > Merchant ID的页面）,还有需要给Merchant ID添加一个证书签名请求（Certificate Signing Request），以便加密支付令牌来保证其安全性。为达到这个目的，导航至你的Merchant ID，并点击Edit按钮来修改它..
+        5.注意Apple Pay Identity Guidelines.pdf里面的内容,苹果对Apple Pay的图标有严格的要求,须遵守,否则会被拒😭
+
+
+ //============================20160114修订稿========================//
+    *------------->本次更新了银联支付SDK，因为银联SDK更新到了3.0.版本
+    *更新说明：
+        删除旧版本的银联支付SDK,更换新版
+    *相关类说明：
+        1.UPPaymentControl
+            银联支付,
+    *用法：
+        银联支付增加在AppDelegate的方法 application:openURL:sourceApplication:annotation:中使用
+        [UPPaymentControl defaultControl] handlePaymentResult:completeBlock:来处理回调
+    *注意：
+        需添加如下文件（删除旧版本）
+        UPPaymentControl.h
+        libPaymentControl.a
+
+
+ //============================20151204初稿========================//
+    *------------->本次只集成了支付宝支付、微信支付、银联支付
+     ------------->注意仅支持支付,退款等其他相关功能未集成,后续完善
+     ------------->仅支持单笔支付,批量付款不支持,建议后台处理
+    *相关类说明：
+        1.GJSPayAlipay
+            支付宝支付,
+        2.GJSPayWXpay
+            微信支付
+        3.GJSPayUnionpay
+            银联支付
+
+        4.GJSPay
+            集成以上三种支付,也可作Demo用
+        
+        5.GJSPayProtocol
+            支付协议,定义有支付成功、失败、取消的代理方法
+            另，定义有订单模型需遵守的协议
+    *用法：
+        （考虑安全性和统一性,建议后台进行订单管理：包括加解密、签名验证）
+        取到后台返回生成的订单信息,可以封装成model,具体参考Demo示例
+    *注意：
+        每种支付都需要对应的SDK,并添加需要的库,配置库文件和头文件搜索路径
+
+
+*/
