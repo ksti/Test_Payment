@@ -1,0 +1,71 @@
+/* 
+  接入指南.strings
+  Test_payment
+
+  Created by forp on 15/12/7.
+  Copyright © 2015年 forp. All rights reserved.
+*/
+
+/*
+ //注册签约所需材料，具体参考下面的官网链接
+ 1、支付宝注册签约：
+ （1）支付宝注册企业账户//https://memberprod.alipay.com/account/reg/enterpriseIndex.htm
+ （2）签约“移动支付”所需文档要求//https://cshall.alipay.com/enterprise/help_detail.htm?help_id=546690
+ 2、微信注册签约：
+ （1）开发者资质提交指引//http://kf.qq.com/faq/120322fu63YV130422Anmee2.html
+ （2）申请微信支付商户需要准备的资料//http://kf.qq.com/faq/120911VrYVrA150813NbE7ju.html
+ 3、银联注册签约：
+ （1）商户服务电子化入网平台-->入网流程//https://merchant.unionpay.com/join/help/faq?id=3
+ */
+
+/*================================================*/
+/*
+ 1、支付宝：()
+ //商家服务:
+ 如何签约：
+ //https://app.alipay.com/market/document.htm?name=qianyueditu
+ 了解产品：
+ //https://app.alipay.com/market/productIndex.htm
+ 移动支付：
+ //https://b.alipay.com/order/productDetail.htm?productId=2015110218010538
+ 
+ //开放平台:
+ 开发者文档中心：
+ //http://doc.open.alipay.com/doc2/alipayDocIndex.htm
+ 接入指南：
+ //http://doc.open.alipay.com/doc2/detail?treeId=58&articleId=103541&docType=1
+ 移动支付：
+ //http://doc.open.alipay.com/doc2/detail?treeId=59&articleId=103563&docType=1
+ 
+ 
+ 2、微信支付：()
+ //商户平台：
+ 接入指南：
+ //https://pay.weixin.qq.com/index.php/home/login?return_url=%2Findex.php%2Faccount
+ 开发者资质提交指引：
+ //http://kf.qq.com/faq/120322fu63YV130422Anmee2.html
+ 
+ //开发平台：
+ 移动应用开发：
+ //https://open.weixin.qq.com/cgi-bin/frame?t=home/app_tmpl&lang=zh_CN
+ iOS接入指南：
+ //https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=1417694084&token=&lang=zh_CN
+ 
+ 
+ 3、银联支付：()
+ //商户服务：
+ 商户服务电子化入网平台：
+ //https://merchant.unionpay.com/join/index
+ 商户入网新手指南：
+ //https://merchant.unionpay.com/join/help/director
+ 入网流程：
+ //https://merchant.unionpay.com/join/help/faq?id=3
+ 
+ //开放平台：
+ 商家技术服务：
+ //https://open.unionpay.com/ajweb/index
+ 接入指南：
+ //https://open.unionpay.com/ajweb/help/toPage
+ 帮助中心：
+ //https://open.unionpay.com/ajweb/help/file
+*/
